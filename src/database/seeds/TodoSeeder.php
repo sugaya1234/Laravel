@@ -11,6 +11,8 @@ class TodoSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('todos')->truncate();
+        
         $testData = [
             [
                 'content' => 'PHP Appセクションを終える',
