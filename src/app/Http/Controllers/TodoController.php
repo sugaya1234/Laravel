@@ -59,4 +59,12 @@ public function update(TodoRequest $request, $id)
     return redirect()->route('todo.show', $todo->id);
 }
 
+public function delete($id)
+{
+    $todo = $this->todo->find($id);
+    $todo->delete();
+
+    return redirect()->route('todo.index');
+}
+
 }
